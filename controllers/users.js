@@ -1,4 +1,4 @@
-const User = require("../models/user");
+const User = require("../models/user.js");
 
 module.exports.renderSignupForm = (req, res) => {
   res.render("users/signup.ejs");
@@ -15,7 +15,7 @@ module.exports.signup =async(req,res) => {
       if(err) {
         return next(err);
       }
-      req.flash("success","Welcome to Wanderlust");
+      req.flash("success",`${username} Welcome to Wanderlust`);
       res.redirect("/listings");
     });
   } catch(e){
@@ -29,7 +29,8 @@ module.exports.renderLoginForm = (req,res) => {
 };
 
 module.exports.login = async(req,res) => {
-  req.flash("success","Welcome back to Wanderlust! ");
+  let {username} =req.body;
+  req.flash("success",`Welcome back to Wanderlust!${username}`);
   let redirectUrl = res.locals.redirectUrl || "/listings";
   res.redirect(redirectUrl);
 };

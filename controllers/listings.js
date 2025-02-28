@@ -30,7 +30,7 @@ module.exports.showListing = async(req,res) => {
   res.render("listings/show.ejs",{listing});
 };
 
-module.exports.createListing = async (req,res,next) => {
+module.exports.createListing = async (req,res) => {
   let response = await geocodingClient
   .forwardGeocode({
     query: req.body.listing.location,
@@ -64,7 +64,7 @@ module.exports.createListing = async (req,res,next) => {
   }
 
   let originalImageUrl = listing.image.url;
-  originalImageUrl = originalImageUrl.replace("/upload","/upload/w_250");
+  originalImageUrl = originalImageUrl.replace("/upload","/upload/w_220");
   res.render("listings/edit.ejs",{ listing, originalImageUrl});
 };
 
@@ -87,6 +87,6 @@ module.exports.destroyListing = async(req, res) => {
   let{ id } = req.params;
   let deletedListing = await Listing.findByIdAndDelete(id);
   console.log(deletedListing);
-  req.flash("success","Listing Deleted!");
+  req.flash("success","Listing Deleted!🪅");
   res.redirect("/listings");
 };

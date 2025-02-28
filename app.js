@@ -5,6 +5,7 @@ if(process.env.NODE_ENV != "production"){
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
+const port = 8080;
 const path = require("path");
 const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
@@ -98,6 +99,7 @@ app.get("/demouser",async(req,res) => {
    res.send(registeredUser);
 })
 
+
 app.use("/listings",listingRouter);
 app.use("/listings/:id/reviews",reviewRouter);
 app.use("/",userRouter);
@@ -113,8 +115,8 @@ app.use((err,req,res,next) => {
   // res.status(statusCode).send(message);
 });
 
-app.listen(8080, () =>{
-  console.log("server is listening to port 8080 ");
+app.listen(port, () =>{
+  console.log(`server is listening to port ${port}`);
 });
 
 

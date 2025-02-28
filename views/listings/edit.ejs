@@ -1,8 +1,9 @@
 <% layout("/layouts/boilerplate") %>
+<body>
 <div class="row mt-3">
   <div class="col-8 offset-2">
     <br/><br/>
-  <h3>Edit your Listing</h3>
+  <h3 style="display: flex; justify-content: center">Edit your Listing</h3>
   <form method="POST"  class="needs-validation" action="/listings/<%= listing._id %>?_method=PUT" novalidate enctype="multipart/form-data">
     <div class="mb-3">
       <label for="title" class="form-label">Title</label>
@@ -47,3 +48,4 @@
   </div>
   </div>
   <script  src="/js/script.js"></script>
+</body>
