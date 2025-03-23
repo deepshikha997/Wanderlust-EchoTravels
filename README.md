@@ -48,7 +48,7 @@ Edit
   MAPBOX_TOKEN=your_mapbox_api_token
 
 ```
-###Executing program
+##Executing program
 1. **starting the application**
    ```
    node app.js
