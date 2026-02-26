@@ -46,6 +46,8 @@ This project requires the following technologies:
   CLOUDINARY_SECRET=your_cloudinary_secret
   MAPBOX_TOKEN=your_mapbox_api_token
   ```
+---
+
 ### Executing program
 1. **starting the application**
    ```
@@ -53,9 +55,12 @@ This project requires the following technologies:
    ```
     1.1 **The application will be available at:**
       http://localhost:8080/listing
-3. **Access the deployed version: Visit:**
+2. **Access the deployed version: Visit:**
+   
  [ https://major-project-1-cey8.onrender.com/listing](https://wanderlust-echotravels.onrender.com)
-  
+
+ ---
+ 
 ### Usage
 
 <b>--Login / Signup – Users can create an account or log in.</b></br>
@@ -65,39 +70,52 @@ This project requires the following technologies:
 <b>--Image Uploads – Uses Cloudinary for storing property images.</b></br>
 <b>--Map Integration – Uses Mapbox to display property locations.</b></br>
 
+---
+
 ### Contributing
 1. **Contributions are welcome! Please follow these steps:**
 
-    Fork the repository
-    Click on the Fork button at the top right of the repo page.
+   Fork the repository
+   Click on the Fork button at the top right of the repo page.
 
-2. **Clone your forked repo:**
-  ```
-  git clone https://github.com/YOUR_GITHUB_USERNAME/Wanderlust-EchoTravels.git
-  cd Wanderlust-EchoTravels
-  ```
+3. **Clone your forked repo:**
+
+   ```
+   git clone https://github.com/YOUR_GITHUB_USERNAME/Wanderlust-EchoTravels.git
+   cd Wanderlust-EchoTravels
+   
+   ```
 3. **Create a new branch for your feature/fix:**
-```
-git checkout -b feature-name
-```
+   ```
+   git checkout -b feature-name
+
+   ```
 4. **Make your changes and commit:**
-```
-git add .
-git commit -m "Added new feature: <brief description>"
-```
+   ```
+   git add .
+   git commit -m "Added new feature: <brief description>"
+
+   ```
 5. **Push your changes to GitHub:**
-```
-git push origin feature-name
-```
+   ```
+   git push origin feature-name
+
+   ```
 6. **Open a Pull Request (PR)**
-Go to the original repository on GitHub and click New Pull Request.
+
+   Go to the original repository on GitHub and click New Pull Request.
+   
+---
 
 ### Contribution Guidelines:
 
 1. **Ensure your code follows the existing project structure.**
-<b>--Use clear commit messages.</b></br>
-<b>--Test changes before submitting a PR.</b></br>
-<b>--Avoid breaking existing functionality.</b></br>
+   
+   <b>--Use clear commit messages.</b></br>
+   <b>--Test changes before submitting a PR.</b></br>
+   <b>--Avoid breaking existing functionality.</b></br>
+
+---
 
 ### Help
 **For common issues, try:**
@@ -109,6 +127,13 @@ npm audit fix
 ```
 npm run debug
 ```
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
 
 #### Acknowledgments
 Express.js</b></br>
