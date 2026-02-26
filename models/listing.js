@@ -27,12 +27,15 @@ const listingSchema = new Schema({
     type : String,
     required : true,
   },
-  reviews: [
-    {
-      type : Schema.Types.ObjectId,
-      ref: "Review",
-    },
-  ],
+  reviews: {
+    type: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Review",
+      },
+    ],
+    default: [],
+  },
   owner: {
     type: Schema.Types.ObjectId,
     ref: "User",
