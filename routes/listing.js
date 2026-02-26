@@ -10,6 +10,18 @@ const upload = multer({ storage });
 
 const listingController = require("../controllers/listings.js");
 
+// ✅ STATIC ROUTES BEFORE DYNAMIC ONES
+router.get("/new", isLoggedIn, listingController.renderNewForm);
+
+router.get(
+  "/:id/edit",
+  isLoggedIn,
+  isOwner,
+  wrapAsync(listingController.renderEditForm)
+);
+
+
+
 router
   .route("/")
   .get(wrapAsync(listingController.index))
@@ -39,11 +51,11 @@ router
       );
 
 // Edit Route
-router.get
-("/:id/edit",
-  isLoggedIn,
-  isOwner,
-  wrapAsync(listingController.renderEditForm));
+// router.get
+// ("/:id/edit",
+//   isLoggedIn,
+//   isOwner,
+//   wrapAsync(listingController.renderEditForm));
 
 
 module.exports = router;

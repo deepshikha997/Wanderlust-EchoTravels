@@ -33,22 +33,20 @@ This project requires the following technologies:
 2. **Install dependencies:**
    ```bash
      npm install --force
-4. **Set up environment variables: Create a .env file in the project root and add:
+4. **Set up environment variables: Create a .env file in the project root and add:**
+     env
+     Copy
+     Edit
 
-env
-Copy
-Edit
-**
-  ```bash
+```bash
   PORT=8080
   DATABASE_URL=your_mongodb_connection_string
   CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
   CLOUDINARY_KEY=your_cloudinary_key
   CLOUDINARY_SECRET=your_cloudinary_secret
   MAPBOX_TOKEN=your_mapbox_api_token
-
-```
-###Executing program
+  ```
+### Executing program
 1. **starting the application**
    ```
    node app.js
@@ -73,25 +71,25 @@ Edit
     Fork the repository
     Click on the Fork button at the top right of the repo page.
 
-2. **Clone your forked repo:
+2. **Clone your forked repo:**
   ```
-git clone https://github.com/YOUR_GITHUB_USERNAME/Wanderlust-EchoTravels.git
-cd Wanderlust-EchoTravels
-```
-3. **Create a new branch for your feature/fix:
+  git clone https://github.com/YOUR_GITHUB_USERNAME/Wanderlust-EchoTravels.git
+  cd Wanderlust-EchoTravels
+  ```
+3. **Create a new branch for your feature/fix:**
 ```
 git checkout -b feature-name
 ```
-4. **Make your changes and commit:
+4. **Make your changes and commit:**
 ```
 git add .
 git commit -m "Added new feature: <brief description>"
 ```
-5. **Push your changes to GitHub:
+5. **Push your changes to GitHub:**
 ```
 git push origin feature-name
 ```
-6. **Open a Pull Request (PR)</br>
+6. **Open a Pull Request (PR)**
 Go to the original repository on GitHub and click New Pull Request.
 
 ### Contribution Guidelines:
@@ -100,6 +98,7 @@ Go to the original repository on GitHub and click New Pull Request.
 <b>--Use clear commit messages.</b></br>
 <b>--Test changes before submitting a PR.</b></br>
 <b>--Avoid breaking existing functionality.</b></br>
+
 ### Help
 **For common issues, try:**
 
