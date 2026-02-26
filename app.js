@@ -70,6 +70,10 @@ const sessionOptions = {
 //   res.send("Server is working");
 // });
 
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+});
+
 
 
 app.use(session(sessionOptions));
@@ -118,6 +122,9 @@ app.all("*",(req,res,next) => {
 });
 
 app.use((err,req,res,next) => {
+  if (res.headersSent) {
+    return next(err);
+  }
   let {statusCode=500, message="Something went wrong!"} = err;
   res.status(statusCode).render("error.ejs",{message });
   // res.status(statusCode).send(message);
